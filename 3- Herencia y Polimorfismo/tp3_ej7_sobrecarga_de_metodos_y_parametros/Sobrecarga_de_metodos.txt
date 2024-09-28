@@ -1,0 +1,25 @@
+Sobrecarga de métodos
+La sobrecarga de métodos es un concepto en programación orientada a objetos donde una clase puede tener varios métodos con el mismo nombre, 
+pero con diferentes firmas (número y/o tipos de parámetros). Esto permite que el mismo método actúe de diferentes maneras según los argumentos que reciba.
+
+En algunos lenguajes como Java o C++, la sobrecarga de métodos está soportada de manera explícita. Sin embargo, 
+en Python no existe sobrecarga de métodos de la misma forma, porque el lenguaje permite redefinir métodos simplemente sobrescribiéndolos.
+
+Sobrecarga de métodos en Python
+En Python, como no se soporta la sobrecarga de métodos de forma explícita, una clase no puede tener dos métodos con el mismo nombre. 
+Sin embargo, se puede lograr un comportamiento similar utilizando valores por defecto o el paquete functools para sobrecargar funciones.
+
+Ejemplo en Python usando valores por defecto:
+
+class Calculadora:
+    def sumar(self, a, b, c=None):
+        if c is not None:
+            return a + b + c  # Si hay 3 parámetros
+        return a + b  # Si hay solo 2 parámetros
+
+# Uso
+calc = Calculadora()
+print(calc.sumar(3, 4))       # Suma de dos números
+print(calc.sumar(3, 4, 5))    # Suma de tres números
+
+Aquí, el método sumar se comporta de manera diferente según el número de argumentos que reciba, simulando la sobrecarga.

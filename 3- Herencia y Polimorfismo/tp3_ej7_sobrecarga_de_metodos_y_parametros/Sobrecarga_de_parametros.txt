@@ -1,0 +1,19 @@
+Sobrecarga de parámetros
+La sobrecarga de parámetros se refiere a la capacidad de un método o función de aceptar una cantidad variable de argumentos, 
+o argumentos de diferentes tipos, y adaptarse en consecuencia. Es una técnica relacionada con la sobrecarga de métodos, pero se centra en los parámetros.
+
+Existen varias maneras de manejar la sobrecarga de parámetros en Python, incluyendo:
+
+1-  Valores por defecto: Como vimos en el ejemplo anterior.
+2-  Uso de *args y **kwargs: Esto permite pasar una cantidad variable de argumentos posicionales o nombrados.
+
+Ejemplo con *args:
+
+class Calculadora:
+    def sumar(self, *args):
+        return sum(args)  # Suma todos los argumentos que se pasen
+
+# Uso
+calc = Calculadora()
+print(calc.sumar(1, 2))         # Suma de dos números
+print(calc.sumar(1, 2, 3, 4))   # Suma de cuatro números
