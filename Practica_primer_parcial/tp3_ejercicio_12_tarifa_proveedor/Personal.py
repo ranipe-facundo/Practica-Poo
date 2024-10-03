@@ -11,4 +11,3 @@ class Personal(TarifaProveedor):
     def _calcularConsumoGB(self):
         return super()._calcularConsumoGB() * 1.5
     
-# Personal: que tiene un 20% extra sobre los minutos de llamada y 50% sobre los GBdedatos.

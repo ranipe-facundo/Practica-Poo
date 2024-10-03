@@ -13,6 +13,3 @@ class Movistar(TarifaProveedor):
         return super()._calcularMinutosDeLlamada() *1.2
     def _calcularConsumoGB(self):
         return super()._calcularConsumoGB() *1.3
-
-    #Movistar: tiene un 10% extra sobre los mensajes de texto, 20% sobre las
-    #llamadas y 30% sobre los GB de datos.
