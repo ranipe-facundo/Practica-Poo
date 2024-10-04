@@ -2,7 +2,7 @@ import sys
 from PyQt6.QtCore import QSize
 from PyQt6 import QtCore, QtGui, QtWidgets
 
-class Ui_Tp3Ejercicio1(object):
+class ventana1(object):
     def setupUi(self, Tp3Ejercicio1):
         Tp3Ejercicio1.setObjectName("Tp3Ejercicio1")
         Tp3Ejercicio1.setFixedSize(QSize(500, 250))
@@ -29,18 +29,18 @@ class Ui_Tp3Ejercicio1(object):
     def retranslateUi(self, Tp3Ejercicio1):
         _translate = QtCore.QCoreApplication.translate
         Tp3Ejercicio1.setWindowTitle(_translate("Tp3Ejercicio1", "MainWindow"))
-        self.boton1.setText(_translate("Tp3Ejercicio1", "PushButton"))
+        self.boton1.setText(_translate("Tp3Ejercicio1", "Presione"))
         self.Etiqueta1.setText(_translate("Tp3Ejercicio1", "Haga click"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Tp3Ejercicio1 = QtWidgets.QMainWindow()
-    ui = Ui_Tp3Ejercicio1()
-    ui.setupUi(Tp3Ejercicio1)
-    Tp3Ejercicio1.show()
-    sys.exit(app.exec())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     Tp3Ejercicio1 = QtWidgets.QMainWindow()
+#     ui = ventana1()
+#     ui.setupUi(Tp3Ejercicio1)
+#     Tp3Ejercicio1.show()
+#     sys.exit(app.exec())
 
 
 
