@@ -1,15 +1,14 @@
-import sys
 from PyQt6 import QtWidgets
-from Ventanas.ventana1 import ventana1  # Importa la clase ventana1 desde la carpeta ventanas
-from Ventanas.ventana2 import ventana2
+from ventana1 import Ventana1
+from ventana2 import Ventana2
 
 class Controlador(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
         
         # Crea las instancias de las ventanas
-        self.ventana1_ui = ventana1()
-        self.ventana2_ui = ventana2()
+        self.ventana1_ui = Ventana1()
+        self.ventana2_ui = Ventana2()
 
         # Crear una instancia del QMainWindow para la primera ventana
         self.ventana1_mainwindow = QtWidgets.QMainWindow()

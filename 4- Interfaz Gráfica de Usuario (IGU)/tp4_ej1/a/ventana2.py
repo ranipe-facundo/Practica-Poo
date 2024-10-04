@@ -1,7 +1,8 @@
-from PyQt6 import QtCore, QtGui, QtWidgets
+#import sys
+from PyQt6 import QtCore, QtWidgets
 from PyQt6.QtCore import QSize
 
-class ventana2(object):
+class Ventana2(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(QSize(373, 111))
@@ -27,17 +28,18 @@ class ventana2(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("Ventana 2", "Ventana 2"))
         self.BotonCancelar.setText(_translate("MainWindow", "Cancelar"))
         self.BotonAceptar.setText(_translate("MainWindow", "Aceptar"))
         self.label.setText(_translate("MainWindow", "Está seguro que quiere dar de baja al usuario?"))
 
-
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     MainWindow = QtWidgets.QMainWindow()
-#     ui = ventana2()
-#     ui.setupUi(MainWindow)
-#     MainWindow.show()
-#     sys.exit(app.exec())
+"""
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ventana2()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec())
+"""
