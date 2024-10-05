@@ -1,11 +1,11 @@
 from Cuenta import Cuenta
 import random
 
-class Cuenta_Bancaria(Cuenta):
+class Cuenta_bancaria(Cuenta):
     def __init__(self, duenio):
         super().__init__(duenio)
-        self.__cbu = random.randint(0,999)
-    
+        self.__cbu = random.randint(0,99999)
+        
     def pago_debito(self, monto_a_debitar):
         super().pago_debito(monto_a_debitar)
         renintegro = monto_a_debitar * 0.1

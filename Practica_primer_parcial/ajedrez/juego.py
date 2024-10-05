@@ -1,0 +1,1 @@
+from tipo_pieza import p
