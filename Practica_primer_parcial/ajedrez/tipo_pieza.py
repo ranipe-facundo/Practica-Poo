@@ -31,3 +31,4 @@ class reina(Pieza):
 class rey(Pieza):
     def __init__(self, color, ubicacion):
         super().__init__("rey","vivo", color, ubicacion)
+        

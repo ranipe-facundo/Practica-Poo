@@ -13,3 +13,7 @@ class AccionesPieza(ABC):
         @abstractmethod
         def comer(self):
             pass
+        
+        @abstractmethod
+        def imprimir(self):
+            pass

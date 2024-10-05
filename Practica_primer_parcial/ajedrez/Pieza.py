@@ -6,7 +6,13 @@ class Pieza(AccionesPieza,ABC):
         self._nombre = nombre
         self._estado = estado
         self._color = color
-        self.ubicacion = ubicacion
+        self._ubicacion = ubicacion
+        
+        def imprimir(self):
+            print (self._color)
+            print (self._estado)
+            print (self._nombre)
+            print (self._ubicacion)
 
         def posibles_movimientos(self):
             pass
