@@ -6,7 +6,7 @@ class Cuenta_bancaria(Cuenta):
         super().__init__(duenio)
         self.__cbu = random.randint(0,99999)
         
-    def pago_debito(self, monto_a_debitar):
+    def pagar_debito(self, monto_a_debitar):
         super().pago_debito(monto_a_debitar)
         renintegro = monto_a_debitar * 0.1
         self._saldo = self._saldo + renintegro
