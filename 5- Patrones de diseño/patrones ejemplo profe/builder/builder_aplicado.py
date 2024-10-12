@@ -97,3 +97,7 @@ print("\n")
 print("Smartphone alta gama: ")
 director.build_full()
 builder.smartphone.list_parts()
+
+director.build_basic()
+variable_basica = builder.smartphone
+variable_basica.list_parts()

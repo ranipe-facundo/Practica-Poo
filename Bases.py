@@ -17,9 +17,15 @@ for i in range(300):
     print(f"VALUES ('{random.choice(nombres)}', {random.randint(9000000,20000000)}, '{random.choice(tipo_cliente)}');")
 """
 
-
+"""
 #crear embarques
 for i in range (321):
     nueva_fecha = nueva_fecha - timedelta(days=random.randint(1,25))
     print ("insert into ej1.embarque (id_cliente, peso, id_camion, destino, fecha_embarque)")
     print (f"values ('{random.randint(1,501)}','{round(random.uniform(1, 500), 2)}','{random.randint(5,54)}','{random.choice(ciudades)}','{nueva_fecha.strftime('%Y/%m/%d')}');")
+"""
+
+for i in range (3) :
+    nueva_fecha = nueva_fecha - timedelta(days=random.randint(1,25))
+    print ("insert into ej1.embarque (id_cliente, peso, id_camion, destino, fecha_embarque)")
+    print (f"values ('433','{round(random.uniform(1, 500), 2)}','{random.randint(5,54)}','{random.choice(ciudades)}','{nueva_fecha.strftime('%Y/%m/%d')}');")
