@@ -1,7 +1,5 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from typing import Any
-
 
 class BuilderTorta(ABC):
     
@@ -70,8 +68,6 @@ class ConcreteBuilderTorta(BuilderTorta):
     def set_relleno_nuevo(self, relleno_nuevo):
         self._torta.relleno = relleno_nuevo
 
-
-
 class Torta():
     def __init__(self) -> None:
         self.masa = ""
@@ -85,15 +81,15 @@ class Torta():
 
 class Director:
     def __init__(self) -> None:
-        self._builder = None
+        self.__builder = None
 
     @property
     def builder(self) -> BuilderTorta:
-        return self._builder
+        return self.__builder
 
     @builder.setter
     def builder(self, builder: BuilderTorta) -> None:
-        self._builder = builder
+        self.__builder = builder
     
     def build_torta_de_vainilla(self) -> None:
         self.builder.set_masa_vainilla()

@@ -2,7 +2,6 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Any
 
-
 class BuilderSmartphone(ABC):
 
     @property
@@ -25,7 +24,8 @@ class BuilderSmartphone(ABC):
     @abstractmethod
     def produce_bluetooth(self) -> None:
         pass
-
+    
+#EJEMPLO PROFE
 class ConcreteBuilderSmartphone(BuilderSmartphone):
 
     def __init__(self) -> None:
