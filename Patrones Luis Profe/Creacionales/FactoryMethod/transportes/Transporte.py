@@ -6,5 +6,5 @@ class Transporte(ABC):
     
     @abstractmethod
     def entregar(self):
-        pass
+        pass 
 

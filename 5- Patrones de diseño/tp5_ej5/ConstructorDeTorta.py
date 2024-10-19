@@ -1,23 +1,11 @@
-from Torta import Torta
+from abc import ABC, abstractmethod
 
-class ConstructorDeTorta:
-    def __init__(self):
-        self._torta = None
+class ConstructorDeTorta(ABC):
     
-    def get_torta(self):
-        return self._torta
-    
-    def crear_nueva_torta(self, nombre):
-        self._torta = Torta(nombre)
-    
-    def set_relleno(self, relleno):
+    @abstractmethod
+    def agregar_masa(self,masa):
         pass
     
-    def set_masa(self, masa):
+    @abstractmethod
+    def agregar_relleno(self, relleno):
         pass
-    
-#    def set_relleno(self):
-#        raise NotImplementedError
-#                                       <-- Creo que esto se usaria si estoy agregando parametros que podria tener o no la torta
-#    def set_masa(self):
-#        raise NotImplementedError

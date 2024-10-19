@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-
-class Logistica(ABC):
+#creador
+class Logistica(ABC): 
     
     @abstractmethod
     def _crear_transporte(self):
@@ -9,4 +9,3 @@ class Logistica(ABC):
     def planificar_entrega(self):
         transporte = self._crear_transporte()
         transporte.entregar()
-

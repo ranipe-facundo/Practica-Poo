@@ -1,13 +1,15 @@
+#Está mal tendria que ser una interface
+
 from Casa import Casa
 
 class ConstructorDeCasa:
     def __init__(self):
         self._casa = None
 
-    def get_casa(self):
+    def get_casa(self): #Build
         return self._casa
 
-    def crear_nueva_casa(self, nombre):
+    def crear_nueva_casa(self, nombre): #Reset
         self._casa = Casa(nombre)
 
     def construir_cimientos(self):
