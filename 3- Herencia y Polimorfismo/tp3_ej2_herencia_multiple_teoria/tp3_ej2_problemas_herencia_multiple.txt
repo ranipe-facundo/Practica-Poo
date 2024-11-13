@@ -1,0 +1,69 @@
+La herencia múltiple es un concepto en programación orientada a objetos donde una clase puede heredar de más de una clase padre. 
+A diferencia de la herencia simple (donde una clase hija solo tiene una clase base), en la herencia múltiple,
+una clase hija puede heredar comportamientos y propiedades de varias clases a la vez.
+
+Ejemplo de herencia múltiple:
+
+class ClaseA:
+    def metodo(self):
+        print("Método en ClaseA")
+
+class ClaseB:
+    def metodo(self):
+        print("Método en ClaseB")
+
+class ClaseC(ClaseA, ClaseB):
+    pass
+
+# Uso
+obj = ClaseC()
+obj.metodo()  # ¿Cuál método se ejecuta?
+
+En este ejemplo, la clase ClaseC hereda de ClaseA y ClaseB, y ambas clases definen un (método) con el mismo nombre (metodo). Este es un ejemplo básico de herencia múltiple.
+
+Problema que surge: El Diamante o Problema del Diamante
+Uno de los problemas más comunes que aparece en la herencia múltiple es el problema del diamante o ambiguidad de métodos. 
+Esto ocurre cuando una clase hereda de dos (o más) clases que a su vez heredan de una clase común. 
+El problema aparece cuando el intérprete no sabe de qué clase exactamente debe heredar ciertos atributos o métodos, 
+lo que puede causar confusión sobre cuál versión del método o atributo debería ejecutarse.
+
+Ejemplo del problema del diamante:
+
+class ClaseBase:
+    def metodo(self):
+        print("Método en ClaseBase")
+
+class ClaseA(ClaseBase):
+    def metodo(self):
+        print("Método en ClaseA")
+
+class ClaseB(ClaseBase):
+    def metodo(self):
+        print("Método en ClaseB")
+
+class ClaseC(ClaseA, ClaseB):
+    pass
+
+# Uso
+obj = ClaseC()
+obj.metodo()  # ¿Cuál método se ejecuta?
+
+En este caso, ClaseC hereda de ClaseA y ClaseB, y ambas heredan de ClaseBase. Tanto ClaseA como ClaseB sobrescriben el método metodo, 
+por lo que el intérprete podría confundirse sobre cuál versión de metodo debe ejecutarse al llamarlo en un objeto de ClaseC. 
+¿Debe llamar al método de ClaseA, al de ClaseB, o al de ClaseBase?
+
+Solución: MRO (Method Resolution Order)
+Python resuelve este problema mediante el MRO (Orden de Resolución de Métodos, por sus siglas en inglés), 
+que define el orden en que se buscan métodos en las clases cuando hay herencia múltiple. El orden de búsqueda sigue el Algoritmo C3 Linearization, 
+que establece una jerarquía clara para evitar ambigüedades.
+
+Para ver el orden en el que Python buscará los métodos, puedes usar el atributo __mro__ o la función mro():
+
+print(ClaseC.mro())
+
+Esto imprimirá el orden de búsqueda de métodos en ClaseC.
+
+Conclusión
+La herencia múltiple es una herramienta poderosa que permite reutilizar código de diferentes clases, 
+pero debe usarse con precaución debido a problemas como el del diamante. El MRO ayuda a evitar estos conflictos en Python, 
+pero en otros lenguajes de programación, la herencia múltiple puede no estar soportada directamente debido a la complejidad que introduce.
