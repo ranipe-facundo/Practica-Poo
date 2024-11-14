@@ -55,3 +55,5 @@ decorator1 = ConcreteDecoratorA(simple)
 decorator2 = ConcreteDecoratorB(decorator1)
 print("Client: Now I've got a decorated component:")
 client_code(decorator2)
+
+dec = ConcreteDecoratorA()
