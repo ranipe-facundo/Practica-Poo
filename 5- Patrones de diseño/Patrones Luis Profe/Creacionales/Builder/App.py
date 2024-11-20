@@ -7,6 +7,7 @@ constructor_de_casa = ConstructorDeCasaConcreto()
 director = DirectorDeCasa(constructor_de_casa)
 
 director.construir_casa_simple()
+print (director.get_casa())
 casa_simple = director.get_casa()
 
 director.construir_casa_completa()

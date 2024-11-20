@@ -18,7 +18,6 @@ class Decorator(Component):
 
     @property
     def component(self) -> Component:
-
         return self._component
 
     def operation(self) -> str:
